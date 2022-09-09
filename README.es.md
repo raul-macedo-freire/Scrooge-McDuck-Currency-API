@@ -52,7 +52,8 @@ Para usar conceptos y herramientas de inyección de dependencia, esta API usa py
 
 ## ⌚**programador**
 
-ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar de que python tiene muchas bibliotecas para programar y poner en cola, como:[calendario](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/), este servicio no utiliza tales herramientas, con la intención de buscar un enfoque más eficiente.
+ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar de que python tiene muchas bibliotecas para programar y poner en cola, como:[calendario](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/)
+, this service does not use such tools, intenting to look for a leanest approach.
 
 ## 📔**Almacenamiento de datos**
 
@@ -77,7 +78,7 @@ El código fuente de ScroogeMcDuckCurrencyApi tiene algunos comentarios que vale
 A pesar de que esta aplicación solo utiliza recursos gratuitos, la vida no siempre es un camino de rosas, tenemos algunos secretos que esconder 🕵️ y algunas configuraciones que hacer.
 De hecho, solo tenemos un secreto, que se explica a continuación.</br>
 
-#### <u>ID de aplicación de OpenExchange</u>
+#### <u>OpenExchange APP ID</u>
 
 </br>
 
@@ -191,6 +192,8 @@ si estás usando[VSCODE](https://code.visualstudio.com/), ya he proporcionado un
 Si no está utilizando VSCODE,~~empieza a usarlo~~, eche un vistazo a la configuración de su IDE y ejecute la aplicación desde el`run.py`archivo raíz y no olvide guardar las variables de entorno en la configuración.
 
 Verifique la interfaz de la aplicación en: https&#x3A;//localhost:5000/swagger
+
+**!!!¡¡¡NOTA!!!:**Si ejecuta la aplicación de esta manera, no podrá ejecutar solicitudes de API, ya que la base de datos no se ejecutará.
 
 ## 🧪<b>Ejecución de pruebas</b>
 
