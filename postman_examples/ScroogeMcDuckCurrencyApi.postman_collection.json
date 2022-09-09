@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "dc41879c-82da-4ac5-bc36-deeb8a224ead",
+		"name": "ScroogeMcDuckCurrencyApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21930443"
+	},
+	"item": [
+		{
+			"name": "Get a currency",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://127.0.0.1:5000/currency/?currency_id=USD",
+					"protocol": "https",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"currency",
+						""
+					],
+					"query": [
+						{
+							"key": "currency_id",
+							"value": "USD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Convert an amount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency_converter/?from_currency=USD&to_currency=UNCSC&amount=10000000",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency_converter",
+						""
+					],
+					"query": [
+						{
+							"key": "from_currency",
+							"value": "USD"
+						},
+						{
+							"key": "to_currency",
+							"value": "UNCSC"
+						},
+						{
+							"key": "amount",
+							"value": "10000000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5000/currencies/?page_size=100&page_number=2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"currencies",
+						""
+					],
+					"query": [
+						{
+							"key": "page_size",
+							"value": "100"
+						},
+						{
+							"key": "page_number",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Currency",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"UNCSC\",\r\n  \"name\":\"Uncle Scrooges's currency\",\r\n  \"dollar_conversion_rate\": 0.00000000000123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  a Currency",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"BTC\",\r\n  \"name\": \"Bitcoin\",\r\n  \"dollar_conversion_rate\":0.000051671631 \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency/?currency_id=BTC",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency",
+						""
+					],
+					"query": [
+						{
+							"key": "currency_id",
+							"value": "BTC"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Currency",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": \"USD\",\r\n  \"name\": \"American Dollars\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/currency/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"currency",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
