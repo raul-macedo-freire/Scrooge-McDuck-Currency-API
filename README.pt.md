@@ -192,6 +192,8 @@ Se você não estiver usando o VSCODE,~~comece a usá-lo~~, dê uma olhada na co
 
 Verifique a interface do aplicativo em: https&#x3A;//localhost:5000/swagger
 
+**!!!NOTA!!!:**Se você executar o aplicativo assim, não poderá executar solicitações de API, pois o banco de dados não estará em execução.
+
 ## 🧪<b>Executando testes</b>
 
 ### <u>Testes de unidade</u>
