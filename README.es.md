@@ -16,7 +16,7 @@ ScroogeMcDuckCurrencyApi es una aplicación compatible con varias monedas que pe
 -   Crea su propia moneda basada en el tipo de cambio del dólar
 -   Ejecute métodos RestFull básicos, como: Buscar, actualizar y eliminar.
 
-Esta API fue construida con[APLICACIÓN Matraz](https://flask.palletsprojects.com/en/2.2.x/)y[Matraz-restx](https://flask-restx.readthedocs.io/en/latest/), por lo que se puede utilizar integrado con[Swagger.ui](https://swagger.io/tools/swagger-ui/)interfaz.
+Esta API fue construida con[APLICACIÓN Matraz](https://flask.palletsprojects.com/en/2.2.x/) and [Matraz-restx](https://flask-restx.readthedocs.io/en/latest/), por lo que se puede utilizar integrado con[Swagger.ui](https://swagger.io/tools/swagger-ui/)interfaz.
 
 ## 📖**Documentos Idiomas disponibles:**
 
@@ -28,7 +28,8 @@ Esta API fue construida con[APLICACIÓN Matraz](https://flask.palletsprojects.co
 
 </br>
 
-Dado que las proporciones de divisas se actualizan constantemente, no es posible que un ser humano siga actualizando todos los datos de divisas para convertir cantidades dinámicamente. Por esa razón, ScroogeMcDuckCurrencyApi está integrado con[API de intercambio abierto](https://openexchangerates.org/)Servicio de moneda Api gratuito.</br>Sin embargo, una vez que el usuario busca una moneda o cualquier método, ScroogeMcDuckCurrencyApi no consultará directamente OpenExchange, sino su propia base de datos. Los datos que provienen de OpenExchange se actualizan dinámicamente de acuerdo con la configuración de programación del sistema, que se explica en[configuración](#api-configuration)sección.
+Dado que las proporciones de divisas se actualizan constantemente, no es posible que un ser humano siga actualizando todos los datos de divisas para convertir cantidades dinámicamente. Por esa razón, ScroogeMcDuckCurrencyApi está integrado con[API de intercambio abierto](https://openexchangerates.org/)Servicio de moneda Api gratuito.</br> 
+Howerver, once the user checks for a currency or whatever methods, ScroogeMcDuckCurrencyApi will not directly consult OpenExchange, but it's own database. Data that comes from OpenExchange is dynamically updated according to system scheduling configuration, to be explained in [configuración](#api-configuration)sección.
 
 ## 💵**Tasa de conversión del dólar**
 
@@ -52,8 +53,7 @@ Para usar conceptos y herramientas de inyección de dependencia, esta API usa py
 
 ## ⌚**programador**
 
-ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar de que python tiene muchas bibliotecas para programar y poner en cola, como:[calendario](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/)
-, this service does not use such tools, intenting to look for a leanest approach.
+ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar de que python tiene muchas bibliotecas para programar y poner en cola, como:[calendario](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/), este servicio no utiliza tales herramientas, con la intención de buscar un enfoque más eficiente.
 
 ## 📔**Almacenamiento de datos**
 
@@ -78,7 +78,7 @@ El código fuente de ScroogeMcDuckCurrencyApi tiene algunos comentarios que vale
 A pesar de que esta aplicación solo utiliza recursos gratuitos, la vida no siempre es un camino de rosas, tenemos algunos secretos que esconder 🕵️ y algunas configuraciones que hacer.
 De hecho, solo tenemos un secreto, que se explica a continuación.</br>
 
-#### <u>OpenExchange APP ID</u>
+#### <u>ID de aplicación de OpenExchange</u>
 
 </br>
 
@@ -187,7 +187,7 @@ si está usando Windows, acceda al entorno virtual con:
 si estás usando[VSCODE](https://code.visualstudio.com/), ya he proporcionado un script de ejecución con un[iniciar archivo](./.vscode/launch.json), así que si es el caso:
 
 -   Guarde las variables de entorno en un`.env`expediente
--   ejecutar el`run application`secuencia de comandos con el atajo F5.
+-   Run the `run application`secuencia de comandos con el atajo F5.
 
 Si no está utilizando VSCODE,~~empieza a usarlo~~, eche un vistazo a la configuración de su IDE y ejecute la aplicación desde el`run.py`archivo raíz y no olvide guardar las variables de entorno en la configuración.
 
@@ -238,7 +238,7 @@ Si eres muy malo con los ejemplos y no sabes cómo empezar a probar la API, echa
 -   [Pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest)
 -   [Matraz](https://flask.palletsprojects.com/en/2.2.x/)
 -   [Matraz-Restx](https://flask-restx.readthedocs.io/en/latest/)
--   [otro motor](https://docs.mongoengine.org/tutorial.html)
+-   [El motor](https://docs.mongoengine.org/tutorial.html)
 -   [API de intercambio abierto](https://openexchangerates.org/)
 -   [Docker-Componer](docker-compose.yml)
 -   [ksh](https://k6.io/docs/)
