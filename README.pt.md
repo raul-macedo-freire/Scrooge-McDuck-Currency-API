@@ -52,7 +52,7 @@ Para usar conceitos e ferramentas de injeção de dependência, esta API usa pyt
 
 ## ⌚**Agendador**
 
-ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de que o python possui muitas bibliotecas para agendamento e enfileiramento, como:[cronograma](https://github.com/dbader/schedule),[Croniter](https://github.com/kiorky/croniter)ou[frasco-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
+ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de python ter muitas bibliotecas para agendamento e enfileiramento, como:[cronograma](https://github.com/dbader/schedule),[Croniter](https://github.com/kiorky/croniter)ou[frasco-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
 
 ## 📔**Armazenamento de dados**
 
@@ -68,7 +68,7 @@ ScroogeMcDuckCurrencyApi has a pretty nice interface and performs just fine give
 </br>
 </br>
 
-O código-fonte do ScroogeMcDuckCurrencyApi tem alguns comentários que valem a pena procurar que você pode verificar, procurando por`NOTES:`
+O código-fonte do ScroogeMcDuckCurrencyApi tem alguns comentários que valem a pena olhar que você pode verificar, procurando por`NOTES:`
 
 ## ⚙️**Configuração da API**
 
@@ -86,7 +86,7 @@ O OpenExchange fornece uma API gratuita, mas, para usar esta API, você deve ter
 -   Vamos para[Página de login do OpenExchange](https://openexchangerates.org/signup/free)
 -   crie sua conta
 -   Verifique o ID do seu APP em[Página de IDs de aplicativos](https://openexchangerates.org/account/app-ids)
--   Substitua o campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`no[arquivo docker-compose](docker-compose.yml)
+-   Substitua o campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`no[arquivo de composição do docker](docker-compose.yml)
 
     **Obs:**Se você pretende executar este aplicativo usando um IDE, basta salvar o ID do aplicativo Open Exchange como uma variável de ambiente com o nome`OPENEXCHANGE_APP_ID`.
 
@@ -94,7 +94,7 @@ O OpenExchange fornece uma API gratuita, mas, para usar esta API, você deve ter
 
 </br>
 
-Por padrão, a API atualiza o banco de dados com a API openExchange a cada 10 minutos, mas se você quiser aumentar ou diminuir (quem sabe?) esse atraso, basta substituir o valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`no[arquivo docker-compose](docker-compose.yml)
+Por padrão, a API atualiza o banco de dados com a API openExchange a cada 10 minutos, mas se você quiser aumentar ou diminuir (quem sabe?) esse atraso, basta substituir o valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`no[arquivo de composição do docker](docker-compose.yml)
 
 **Obs:**Assim como o[seção anterior](#uopenexchange-app-idu), se você estiver executando a API localmente em seu IDE, atualize a variável de ambiente`UPDATE_CURRENCIES_MINUTES_SCHEDULE`.
 
@@ -133,7 +133,7 @@ Se você não quiser usar o pyenv e instalar dependências no ambiente python gl
 
 #### <u>Configure o ambiente Python:</u>
 
-Este projeto usa python 3.10.6, vou considerar que você está usando pyenv para gerenciamento de versão python, se não estiver, verifique a configuração do seu gerenciador de dependências e siga os passos abaixo de forma equivalente.
+Este projeto usa python 3.10.6, vou considerar que você está usando pyenv para gerenciamento de versão python, se não estiver, verifique a configuração do gerenciador de dependências e siga os passos abaixo de forma equivalente.
 
 Verifique a versão do Python:
 
@@ -147,7 +147,7 @@ Se você não estiver usando a versão 3.10.6, verifique se a tem instalada, com
 pyenv versions
 ```
 
-Caso contrário, instale a versão com:
+Se você não fizer isso, instale a versão com:
 
 ```bash
 pyenv install -v 3.10.6
@@ -188,7 +188,7 @@ Se você estiver usando[VSCODE](https://code.visualstudio.com/), já forneci um 
 -   Salve as variáveis ​​de ambiente em um`.env`Arquivo
 -   Execute o`run application`script com atalho F5.
 
-Se você não estiver usando o VSCODE,~~comece a usá-lo~~, dê uma olhada na configuração do IDE e execute o aplicativo a partir do`run.py`root e não esqueça de salvar as variáveis ​​de ambiente na configuração.
+Se você não estiver usando o VSCODE,~~comece a usar~~, dê uma olhada na configuração do IDE e execute o aplicativo a partir do`run.py`root e não esqueça de salvar as variáveis ​​de ambiente na configuração.
 
 Verifique a interface do aplicativo em: https&#x3A;//localhost:5000/swagger
 
@@ -221,7 +221,7 @@ E execute o teste:
 k6 run sovietic_attack.js 
 ```
 
-**Obs1:**Não se esqueça de ter o aplicativo instalado e funcionando antes de executar o teste
+**Obs1:** Don't forget to have the application up and running before running the test
 
 **Obs2:**Para que os testes da API sejam mais precisos, cada endpoint deve ser testado individualmente, seguindo as[considerações](https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/), se você quiser testar cada endpoint, descomente o endpoint e comente o resto (ou não, ninguém governa você`¯\_(ツ)_/¯`).
 
@@ -229,7 +229,7 @@ k6 run sovietic_attack.js
 
 ## 😎**Considerações Finais**
 
-Se você é muito ruim com exemplos e não sabe como começar a experimentar a API, dê uma olhada em[carteiro_examples](postman_examples/ScroogeMcDuckCurrencyApi.postman_collection.json). Se não conhece o carteiro, aconselho-o vivamente a[De uma chance](https://www.postman.com/):D
+Se você é muito ruim com exemplos e não sabe como começar a experimentar a API, dê uma olhada em[carteiro_examples](postman_examples/ScroogeMcDuckCurrencyApi.postman_collection.json). Se não conhece o carteiro, aconselho-o vivamente a[De uma chance](https://www.postman.com/) :D 
 
 # Documentação resumida:
 
@@ -237,7 +237,7 @@ Se você é muito ruim com exemplos e não sabe como começar a experimentar a A
 -   [Pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest)
 -   [Frasco](https://flask.palletsprojects.com/en/2.2.x/)
 -   [Flask-Restx](https://flask-restx.readthedocs.io/en/latest/)
--   [Outro motor](https://docs.mongoengine.org/tutorial.html)
+-   [O motor](https://docs.mongoengine.org/tutorial.html)
 -   [API OpenExchange](https://openexchangerates.org/)
 -   [Docker-Compose](docker-compose.yml)
 -   [ksh](https://k6.io/docs/)
