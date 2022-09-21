@@ -6,7 +6,7 @@ services:
         ports:
             - "5000:5000"
         environment:
-            OPENEXCHANGE_APP_ID: "78fbf5833cfa419d955f4ed25aa5f56c"
+            OPENEXCHANGE_APP_ID: "{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}"
             MONGO_HOST: "mongodb"
             MONGO_USERNAME: "username"
             MONGO_PASSWORD: "password"
