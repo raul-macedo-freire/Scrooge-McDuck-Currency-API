@@ -36,7 +36,7 @@ A API de moeda do Tio Patinhas funciona com base na taxa de conversão do dólar
 
 Vamos fazer um exemplo:
 
-Se você deseja converter a moeda do próprio Tio Patinhas para BRL (moeda brasileira), você deve ter a taxa de conversão da moeda do McDuck's dólar, ou seja, quantas moedas do McDuck você precisa para transformá-la em um doller.
+Se você quiser converter a moeda do próprio Tio Patinhas para BRL (moeda brasileira), você deve ter a taxa de conversão da moeda do McDuck's dólar, ou seja, quantas moedas do McDuck você precisa para transformá-la em um doller.
 
 Digamos que a taxa de conversão do dólar do McDuck seja 2 (o que não é possível, pois ele é muito rico), então você precisa de 2 moedas do McDuck para fazer um dólar. Hoje em dia (e isso é impressionantemente assustador), a taxa de conversão do dólar de BRL para USD (identificador universal do dólar) é de 5,22. Para converter 5 McDuck's em Reais, fazemos:
 
@@ -52,7 +52,7 @@ Para usar conceitos e ferramentas de injeção de dependência, esta API usa pyt
 
 ## ⌚**Agendador**
 
-ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de que o python possui muitas bibliotecas para agendamento e enfileiramento, como:[agendar](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)ou[flask-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
+ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de que o python possui muitas bibliotecas para agendamento e enfileiramento, como:[schedule](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)ou[flask-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
 
 ## 📔**Armazenamento de dados**
 
@@ -237,7 +237,7 @@ Se você é muito ruim com exemplos e não sabe como começar a experimentar a A
 -   [Pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest)
 -   [Frasco](https://flask.palletsprojects.com/en/2.2.x/)
 -   [Flask-Restx](https://flask-restx.readthedocs.io/en/latest/)
--   [O motor](https://docs.mongoengine.org/tutorial.html)
+-   [outro motor](https://docs.mongoengine.org/tutorial.html)
 -   [API do OpenExchange](https://openexchangerates.org/)
 -   [Docker-Compose](docker-compose.yml)
 -   [ksh](https://k6.io/docs/)
