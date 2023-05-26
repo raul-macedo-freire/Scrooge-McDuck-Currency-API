@@ -16,20 +16,19 @@ ScroogeMcDuckCurrencyApi es una aplicación compatible con varias monedas que pe
 -   Crea su propia moneda basada en el tipo de cambio del dólar
 -   Ejecute métodos RestFull básicos, como: Buscar, actualizar y eliminar.
 
-Esta API fue construida con[APLICACIÓN Matraz](https://flask.palletsprojects.com/en/2.2.x/) and [Matraz-restx](https://flask-restx.readthedocs.io/en/latest/), por lo que se puede utilizar integrado con[Swagger.ui](https://swagger.io/tools/swagger-ui/)interfaz.
+Esta API fue construida con[APLICACIÓN Matraz](https://flask.palletsprojects.com/en/2.2.x/)y[Matraz-restx](https://flask-restx.readthedocs.io/en/latest/), por lo que se puede utilizar integrado con[Swagger.ui](https://swagger.io/tools/swagger-ui/)interfaz.
 
 ## 📖**Documentos Idiomas disponibles:**
 
--   [inglés](README.md)
+-   [Inglés](README.md)
 -   [portugués](README.pt.md)
--   [español](README.es.md)
+-   [Español](README.es.md)
 
 ## 👷**Servicio de terceros - OpenExchangeAPI**
 
 </br>
 
-Dado que las proporciones de divisas se actualizan constantemente, no es posible que un ser humano siga actualizando todos los datos de divisas para convertir cantidades dinámicamente. Por esa razón, ScroogeMcDuckCurrencyApi está integrado con[API de intercambio abierto](https://openexchangerates.org/)Servicio de moneda Api gratuito.</br> 
-Howerver, once the user checks for a currency or whatever methods, ScroogeMcDuckCurrencyApi will not directly consult OpenExchange, but it's own database. Data that comes from OpenExchange is dynamically updated according to system scheduling configuration, to be explained in [configuración](#api-configuration)sección.
+Dado que las proporciones de divisas se actualizan constantemente, no es posible que un ser humano siga actualizando todos los datos de divisas para convertir cantidades dinámicamente. Por esa razón, ScroogeMcDuckCurrencyApi está integrado con[API de intercambio abierto](https://openexchangerates.org/)Servicio de moneda Api gratuito.</br>Sin embargo, una vez que el usuario busca una moneda o cualquier método, ScroogeMcDuckCurrencyApi no consultará directamente OpenExchange, sino su propia base de datos. Los datos que provienen de OpenExchange se actualizan dinámicamente de acuerdo con la configuración de programación del sistema, que se explica en[configuración](#api-configuration)sección.
 
 ## 💵**Tasa de conversión del dólar**
 
@@ -49,11 +48,11 @@ Digamos que la tasa de conversión de dólares de McDuck es 2 (lo cual no es pos
 
 ## 💉**Inyección de dependencia**
 
-Para usar conceptos y herramientas de inyección de dependencia, esta API usa python[Inyector](https://injector.readthedocs.io/en/latest/). Tuve que encontrar algunas lógicas para que funcionara bien, lo que funcionó,~~En mi humilde opinión~~~, muy bien y se ve bastante bien.
+Para usar conceptos y herramientas de inyección de dependencia, esta API usa python[Inyector](https://injector.readthedocs.io/en/latest/). Tuve que encontrar algunas lógicas para que funcionara bien, lo que funcionó,~~En mi humilde opinión~~, muy bien y se ve bastante bien.
 
 ## ⌚**programador**
 
-ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar de que python tiene muchas bibliotecas para programar y poner en cola, como:[calendario](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/), este servicio no utiliza tales herramientas, con la intención de buscar un enfoque más eficiente.
+ScroogeMcDuckCurrencyApi realiza operaciones cronológicas para actualizar la base de datos con OpenExchange api.</br>A pesar del hecho de que Python tiene muchas bibliotecas para programar y poner en cola, como:[cronograma](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)o[matraz-cronjob](https://pypi.org/project/flask-crontab/), este servicio no utiliza tales herramientas, con la intención de buscar un enfoque más eficiente.
 
 ## 📔**Almacenamiento de datos**
 
@@ -84,10 +83,10 @@ De hecho, solo tenemos un secreto, que se explica a continuación.</br>
 
 OpenExchange proporciona una API de uso gratuito, pero, para usar esta API, debe tener una cuenta en Open Exchange. Para eso:
 
--   Ir[Página de inicio de sesión de OpenExchange](https://openexchangerates.org/signup/free)
+-   Ir a[Página de inicio de sesión de OpenExchange](https://openexchangerates.org/signup/free)
 -   Crea tu cuenta
 -   Verifique su ID de aplicación en[Página ID de la aplicación](https://openexchangerates.org/account/app-ids)
--   Reemplazar el campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`a[archivo docker-compose](docker-compose.yml)
+-   Reemplazar el campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`en[archivo docker-compose](docker-compose.yml)
 
     **Obs:**Si tiene la intención de ejecutar esta aplicación usando un IDE, simplemente guarde su ID de aplicación de Open Exchange como una variable de entorno con nombre`OPENEXCHANGE_APP_ID`.
 
@@ -95,7 +94,7 @@ OpenExchange proporciona una API de uso gratuito, pero, para usar esta API, debe
 
 </br>
 
-Por defecto, la API actualiza la base de datos con openExchange api cada 10 minutos, pero si desea aumentar o disminuir (¿quién sabe?) este retraso, simplemente reemplace el valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`a[archivo docker-compose](docker-compose.yml)
+Por defecto, la API actualiza la base de datos con openExchange api cada 10 minutos, pero si desea aumentar o disminuir (¿quién sabe?) este retraso, simplemente reemplace el valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`en[archivo docker-compose](docker-compose.yml)
 
 **Obs:**Al igual que el[sección previa](#uopenexchange-app-idu), si está ejecutando la API localmente en su IDE, actualice la variable de entorno`UPDATE_CURRENCIES_MINUTES_SCHEDULE`.
 
@@ -186,8 +185,8 @@ si está usando Windows, acceda al entorno virtual con:
 
 si estás usando[VSCODE](https://code.visualstudio.com/), ya he proporcionado un script de ejecución con un[iniciar archivo](./.vscode/launch.json), así que si es el caso:
 
--   Guarde las variables de entorno en un`.env`expediente
--   Run the `run application`secuencia de comandos con el atajo F5.
+-   Guarde las variables de entorno en un`.env`archivo
+-   ejecutar el`run application`secuencia de comandos con el atajo F5.
 
 Si no está utilizando VSCODE,~~empieza a usarlo~~, eche un vistazo a la configuración de su IDE y ejecute la aplicación desde el`run.py`archivo raíz y no olvide guardar las variables de entorno en la configuración.
 
