@@ -223,7 +223,7 @@ k6 run sovietic_attack.js
 
 **Obs1:**No olvide tener la aplicación funcionando antes de ejecutar la prueba.
 
-**Obs2:**Para realizar pruebas más precisas para la API, cada punto final debe probarse individualmente, siguiendo las[consideraciones](https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/), si quieres probar cada endpoint, descomenta el endpoint y comenta el resto (o no, nadie te manda`¯\_(ツ)_/¯`).
+**Obs2:**Para realizar pruebas más precisas para la API, cada punto final debe probarse individualmente, siguiendo las[consideraciones](https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/), if you want to test each endpoint, uncomment the endpoint and comment the rest (or not, nobody rules you `¯\_(ツ)_/¯`).
 
 </br>
 
@@ -237,7 +237,7 @@ Si eres muy malo con los ejemplos y no sabes cómo empezar a probar la API, echa
 -   [Pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest)
 -   [Matraz](https://flask.palletsprojects.com/en/2.2.x/)
 -   [Matraz-Restx](https://flask-restx.readthedocs.io/en/latest/)
--   [El motor](https://docs.mongoengine.org/tutorial.html)
+-   [otro motor](https://docs.mongoengine.org/tutorial.html)
 -   [API de intercambio abierto](https://openexchangerates.org/)
 -   [Docker-Componer](docker-compose.yml)
 -   [ksh](https://k6.io/docs/)
