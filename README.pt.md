@@ -6,7 +6,7 @@
   <img src="https://gifs.eco.br/wp-content/uploads/2021/09/imagens-e-gifs-do-tio-patinhas-5.gif" alt="!LET'S MAKE SOME MONEY LAD/LASS!(read with scottish accent)"/>
 </p>
 
-# 🦆 💲**SCROOGE MCDUCK CURRENCY FLASK API - DESAFIO DE MOEDA BRAVO**💲 🦆
+# 🦆 💲**SCROOGE MCDUCK CURRENCY FLASK API- CURRENCY CHALLENGE BRAVO**💲 🦆
 
 </br>
 
@@ -16,9 +16,9 @@ ScroogeMcDuckCurrencyApi é um aplicativo de suporte a várias moedas, que permi
 -   Cria sua própria moeda com base na taxa de câmbio do dólar
 -   Execute métodos RestFull básicos, como: Localizar, atualizar e excluir.
 
-Esta API foi construída com[APLICATIVO de frasco](https://flask.palletsprojects.com/en/2.2.x/)e[Flask-restx](https://flask-restx.readthedocs.io/en/latest/), portanto, pode ser usado integrado com[Swagger.ui](https://swagger.io/tools/swagger-ui/)interface.
+Esta API foi construída com[APP Flask](https://flask.palletsprojects.com/en/2.2.x/)e[Flask-restx](https://flask-restx.readthedocs.io/en/latest/), portanto pode ser utilizado integrado com[Swagger.ui](https://swagger.io/tools/swagger-ui/)interface.
 
-## 📖**Documentos Idiomas disponíveis:**
+## 📖**Idiomas disponíveis do Documentos:**
 
 -   [Inglês](README.md)
 -   [Português](README.pt.md)
@@ -28,15 +28,15 @@ Esta API foi construída com[APLICATIVO de frasco](https://flask.palletsprojects
 
 </br>
 
-Como as taxas de câmbio são constantemente atualizadas, não é possível que um ser humano continue atualizando todos os dados de moedas, a fim de converter valores dinamicamente. Por esse motivo, ScroogeMcDuckCurrencyApi é integrado com[API OpenExchange](https://openexchangerates.org/)serviço de moeda Api gratuito.</br>No entanto, uma vez que o usuário verifique uma moeda ou qualquer outro método, ScroogeMcDuckCurrencyApi não consultará diretamente o OpenExchange, mas seu próprio banco de dados. Os dados provenientes do OpenExchange são atualizados dinamicamente de acordo com a configuração do agendamento do sistema, a ser explicado em[configuração](#api-configuration)seção.
+Uma vez que as taxas de câmbio estão constantemente sendo atualizadas, não é possível para um ser humano continuar atualizando todos os dados de moedas, a fim de converter valores dinamicamente. Por esse motivo, ScroogeMcDuckCurrencyApi é integrado com[API do OpenExchange](https://openexchangerates.org/)serviço gratuito de moeda Api.</br>No entanto, uma vez que o usuário verifica uma moeda ou quaisquer métodos, ScroogeMcDuckCurrencyApi não consultará diretamente o OpenExchange, mas seu próprio banco de dados. Os dados provenientes do OpenExchange são atualizados dinamicamente de acordo com a configuração de agendamento do sistema, a ser explicado em[configuração](#api-configuration)seção.
 
 ## 💵**Taxa de conversão do dólar**
 
-Scrooge McDuck Currency Api funciona com base na taxa de conversão do dólar, portanto, cada moeda deve ser convertida de seu valor para dólar, antes de ser convertida em outra moeda.
+A API de moeda do Tio Patinhas funciona com base na taxa de conversão do dólar, portanto, cada moeda deve ser convertida de seu valor para dólar, antes de ser convertida em outra moeda.
 
 Vamos fazer um exemplo:
 
-Se você deseja converter a própria moeda do Patinhas em BRL (moeda do Brasil), você deve ter a taxa de conversão do dólar da moeda do McDuck, ou quantas moedas do McDuck você precisa para transformá-lo em um doll.
+Se você quiser converter a moeda do próprio Tio Patinhas para BRL (moeda brasileira), você deve ter a taxa de conversão da moeda do McDuck em dólar, ou seja, quantas moedas do McDuck você precisa para transformá-la em um doller.
 
 Digamos que a taxa de conversão do dólar do McDuck seja 2 (o que não é possível, pois ele é muito rico), então você precisa de 2 moedas do McDuck para fazer um dólar. Hoje em dia (e isso é impressionantemente assustador), a taxa de conversão do dólar de BRL para USD (identificador universal do dólar) é de 5,22. Para converter 5 McDuck's em Reais, fazemos:
 
@@ -48,17 +48,17 @@ Digamos que a taxa de conversão do dólar do McDuck seja 2 (o que não é poss�
 
 ## 💉**Injeção de dependência**
 
-Para usar conceitos e ferramentas de injeção de dependência, esta API usa python[Injetor](https://injector.readthedocs.io/en/latest/). Eu tive que vir com algumas lógicas para fazer funcionar bem o que funcionou,~~Na minha humilde opinião~~~, muito bem e parece muito bem.
+Para usar conceitos e ferramentas de injeção de dependência, esta API usa python[injetor](https://injector.readthedocs.io/en/latest/). Eu tive que encontrar algumas lógicas para fazê-lo funcionar bem, o que funcionou,~~Na minha humilde opinião~~, muito bem e parece muito bem.
 
 ## ⌚**Agendador**
 
-ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de python ter muitas bibliotecas para agendamento e enfileiramento, como:[cronograma](https://github.com/dbader/schedule),[Croniter](https://github.com/kiorky/croniter)ou[frasco-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
+ScroogeMcDuckCurrencyApi executa operações cronológicas para atualizar o banco de dados com a API OpenExchange.</br>Apesar do fato de que o python possui muitas bibliotecas para agendamento e enfileiramento, como:[agendar](https://github.com/dbader/schedule),[cronista](https://github.com/kiorky/croniter)ou[flask-cronjob](https://pypi.org/project/flask-crontab/), este serviço não utiliza tais ferramentas, pretendendo buscar uma abordagem mais enxuta.
 
 ## 📔**Armazenamento de dados**
 
 </br>
 
-ScroogeMcDuckCurrencyApi tem um[mongoDb](https://www.mongodb.com/en-us)banco de dados para armazenar dados do OpenExchange e inseridos pelos usuários.</br>O uso do mongo facilita o uso do fantástico[outro motor](https://docs.mongoengine.org/tutorial.html)python ORM, pois fornece uma visão muito melhor do código com modelos de objetos.
+ScroogeMcDuckCurrencyApi tem um[mongoDb](https://www.mongodb.com/en-us)banco de dados para armazenar dados do OpenExchange e inseridos pelos usuários.</br>O uso do mongo facilita o uso do fantástico[outro motor](https://docs.mongoengine.org/tutorial.html)pacote ORM python, pois fornece uma visão muito melhor do código com modelos de objeto.
 
 ## ❗❗**Isenção de responsabilidade**
 
@@ -68,39 +68,39 @@ ScroogeMcDuckCurrencyApi has a pretty nice interface and performs just fine give
 </br>
 </br>
 
-O código-fonte do ScroogeMcDuckCurrencyApi tem alguns comentários que valem a pena olhar que você pode verificar, procurando por`NOTES:`
+O código-fonte ScroogeMcDuckCurrencyApi tem alguns comentários que vale a pena procurar, que você pode verificar, procurando por`NOTES:`
 
 ## ⚙️**Configuração da API**
 
 </br>
 
-Apesar de este aplicativo usar apenas recursos gratuitos, a vida nem sempre é um mar de rosas, temos alguns segredos para esconder 🕵️ e algumas configurações para fazer.
-Na verdade, temos apenas um segredo, a ser explicado a seguir.</br>
+Apesar de esta aplicação utilizar apenas recursos gratuitos, a vida nem sempre é um mar de rosas, temos alguns segredos a esconder 🕵️ e algumas configurações a fazer.
+Na verdade, só temos um segredo, a ser explicado a seguir.</br>
 
-#### <u>Código do aplicativo OpenExchange</u>
+#### <u>ID do aplicativo OpenExchange</u>
 
 </br>
 
-O OpenExchange fornece uma API gratuita, mas, para usar esta API, você deve ter uma conta no open exchange. Por isso:
+O OpenExchange fornece uma API de uso gratuito, mas, para usar essa API, você deve ter uma conta no open exchange. Por isso:
 
--   Vamos para[Página de login do OpenExchange](https://openexchangerates.org/signup/free)
+-   Vá para[Página de login do OpenExchange](https://openexchangerates.org/signup/free)
 -   crie sua conta
--   Verifique o ID do seu APP em[Página de IDs de aplicativos](https://openexchangerates.org/account/app-ids)
--   Substitua o campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`no[arquivo de composição do docker](docker-compose.yml)
+-   Verifique o seu APP ID em[página de IDs de APP](https://openexchangerates.org/account/app-ids)
+-   Substitua o campo`{YOUR_OPENEXCHANGE_APP_ID_COMES_HERE}`no[arquivo docker-compose](docker-compose.yml)
 
     **Obs:**Se você pretende executar este aplicativo usando um IDE, basta salvar o ID do aplicativo Open Exchange como uma variável de ambiente com o nome`OPENEXCHANGE_APP_ID`.
 
-#### <u>Agendador de atualização de banco de dados</u>
+#### <u>Agendador de atualização do banco de dados</u>
 
 </br>
 
-Por padrão, a API atualiza o banco de dados com a API openExchange a cada 10 minutos, mas se você quiser aumentar ou diminuir (quem sabe?) esse atraso, basta substituir o valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`no[arquivo de composição do docker](docker-compose.yml)
+Por padrão, a API atualiza o banco de dados com a API openExchange a cada 10 minutos, mas se você quiser aumentar ou diminuir (quem sabe?) esse atraso, basta substituir o valor de`UPDATE_CURRENCIES_MINUTES_SCHEDULE`no[arquivo docker-compose](docker-compose.yml)
 
 **Obs:**Assim como o[seção anterior](#uopenexchange-app-idu), se você estiver executando a API localmente em seu IDE, atualize a variável de ambiente`UPDATE_CURRENCIES_MINUTES_SCHEDULE`.
 
 ## 🏃**Executando o aplicativo**
 
-Antes de tudo, clone o repositório:
+Primeiro de tudo, clone o repositório:
 
     git clone git@github.com:raul-macedo-freire/currency-challenge-bravo-api.git
 
@@ -111,7 +111,7 @@ Para executar a API, você tem duas opções:
 
 #### <b>Executar com docker-compose</b>
 
-Se você não está acostumado a trabalhar com o docker, dê uma olhada no[documentos](https://docs.docker.com/get-started/overview/)e instale[docker-compose](https://docs.docker.com/compose/).
+Se você não está acostumado a trabalhar com docker, dê uma olhada no[documentos](https://docs.docker.com/get-started/overview/)e instalar[docker-compose](https://docs.docker.com/compose/).
 
 Depois de se acostumar com o docker, configure o arquivo docker-compose, de acordo com o[Seção de configuração da API](#api-configuration)
 
@@ -127,27 +127,27 @@ Verifique a interface do aplicativo em: https&#x3A;//localhost:5000/swagger
 
 Salve as variáveis ​​de ambiente de acordo com o[Observações de configuração da API](#api-configuration).
 
-Se você não estiver usando um gerenciador de dependências, eu recomendo fortemente usar algo como[pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest).
+Se você não estiver usando um gerenciador de dependências, recomendo usar algo como[pytest](https://docs.pytest.org/en/latest/getting-started.html#install-pytest).
 
-Se você não quiser usar o pyenv e instalar dependências no ambiente python global (quem sabe?), pule para[Instalando dependências](#uinstalling-dependenciesu)seção.
+Se você não quiser usar o pyenv e instalar dependências no ambiente python global (quem sabe?), pule para[Instalando Dependências](#uinstalling-dependenciesu)seção.
 
-#### <u>Configure o ambiente Python:</u>
+#### <u>Configuração do ambiente Python:</u>
 
-Este projeto usa python 3.10.6, vou considerar que você está usando pyenv para gerenciamento de versão python, se não estiver, verifique a configuração do gerenciador de dependências e siga os passos abaixo de forma equivalente.
+Este projeto usa python 3.10.6, vou considerar que você está usando pyenv para gerenciamento de versão python, caso não esteja, verifique a configuração do gerenciador de dependências e siga os passos abaixo de forma equivalente.
 
-Verifique a versão do Python:
+Verifique a versão do python:
 
 ```bash
 python --version
 ```
 
-Se você não estiver usando a versão 3.10.6, verifique se a tem instalada, com:
+Caso não esteja utilizando a versão 3.10.6, verifique se a possui instalada, com:
 
 ```bash
 pyenv versions
 ```
 
-Se você não fizer isso, instale a versão com:
+Caso contrário, instale a versão com:
 
 ```bash
 pyenv install -v 3.10.6
@@ -171,32 +171,32 @@ Ative o ambiente virtual
 source <virtual-env-name>/bin/activate
 ```
 
-se você estiver usando o Windows acesse o ambiente virtual com:
+se estiver usando windows acesse o ambiente virtual com:
 
 ```bash
  .\venv\Scripts\activate
 ```
 
-#### <u>Instalando dependências:</u>
+#### <u>Instalando Dependências:</u>
 
     pip install -r requirements.txt
 
 ### <u>Executando o aplicativo:</u>
 
-Se você estiver usando[VSCODE](https://code.visualstudio.com/), já forneci um script de execução com um[arquivo de lançamento](./.vscode/launch.json), então se for o caso:
+Se você estiver usando[VSCODE](https://code.visualstudio.com/), já forneci um script de execução com um[lançar arquivo](./.vscode/launch.json), então se for o caso:
 
--   Salve as variáveis ​​de ambiente em um`.env`Arquivo
+-   Salve as variáveis ​​de ambiente em um`.env`arquivo
 -   Execute o`run application`script com atalho F5.
 
-Se você não estiver usando o VSCODE,~~comece a usar~~, dê uma olhada na configuração do IDE e execute o aplicativo a partir do`run.py`root e não esqueça de salvar as variáveis ​​de ambiente na configuração.
+Se você não estiver usando o VSCODE,~~comece a usar~~, dê uma olhada na configuração do seu IDE e execute o aplicativo a partir do`run.py`root e não se esqueça de salvar as variáveis ​​de ambiente em configuration.
 
 Verifique a interface do aplicativo em: https&#x3A;//localhost:5000/swagger
 
-**!!!NOTA!!!:**Se você executar o aplicativo assim, não poderá executar solicitações de API, pois o banco de dados não estará em execução.
+**!!!OBSERVAÇÃO!!!:**Se você executar o aplicativo dessa forma, não poderá executar solicitações de API, pois o banco de dados não estará em execução.
 
-## 🧪<b>Executando testes</b>
+## 🧪<b>Testes de execução</b>
 
-### <u>Testes de unidade</u>
+### <u>testes de unidade</u>
 
 Para executar todos os testes de unidade, use:
 
@@ -207,7 +207,7 @@ python -m pytest
 ### <u>Testes de estresse</u>
 
 Este aplicativo usa a ferramenta k6.io para realizar testes de estresse.
-Verifica a[documentação k6](https://k6.io/docs/getting-started/installation/)para instalar a ferramenta.
+Verifica a[documentação do k6](https://k6.io/docs/getting-started/installation/)para instalar a ferramenta.
 
 Para executar o teste, na raiz do aplicativo, entre na pasta de testes:
 
@@ -215,21 +215,21 @@ Para executar o teste, na raiz do aplicativo, entre na pasta de testes:
 cd ./tests
 ```
 
-E execute o teste:
+E faça o teste:
 
 ```bash
 k6 run sovietic_attack.js 
 ```
 
-**Obs1:** Don't forget to have the application up and running before running the test
+**Obs1:**Não se esqueça de ter o aplicativo instalado e funcionando antes de executar o teste
 
-**Obs2:**Para que os testes da API sejam mais precisos, cada endpoint deve ser testado individualmente, seguindo as[considerações](https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/), se você quiser testar cada endpoint, descomente o endpoint e comente o resto (ou não, ninguém governa você`¯\_(ツ)_/¯`).
+**Obs2:**Para tornar os testes mais precisos para a API, cada endpoint deve ser testado individualmente, seguindo as[considerações](https://k6.io/blog/how-to-generate-a-constant-request-rate-with-the-new-scenarios-api/), se você quiser testar cada endpoint, descomente o endpoint e comente o resto (ou não, ninguém manda em você`¯\_(ツ)_/¯`).
 
 </br>
 
 ## 😎**Considerações Finais**
 
-Se você é muito ruim com exemplos e não sabe como começar a experimentar a API, dê uma olhada em[carteiro_examples](postman_examples/ScroogeMcDuckCurrencyApi.postman_collection.json). Se não conhece o carteiro, aconselho-o vivamente a[De uma chance](https://www.postman.com/) :D 
+Se você é muito ruim com exemplos e não sabe como começar a experimentar a API, dê uma olhada em[carteiro_exemplos](postman_examples/ScroogeMcDuckCurrencyApi.postman_collection.json). Se você não conhece o carteiro, eu recomendo fortemente que você[De uma chance](https://www.postman.com/):D
 
 # Documentação resumida:
 
@@ -238,13 +238,13 @@ Se você é muito ruim com exemplos e não sabe como começar a experimentar a A
 -   [Frasco](https://flask.palletsprojects.com/en/2.2.x/)
 -   [Flask-Restx](https://flask-restx.readthedocs.io/en/latest/)
 -   [O motor](https://docs.mongoengine.org/tutorial.html)
--   [API OpenExchange](https://openexchangerates.org/)
+-   [API do OpenExchange](https://openexchangerates.org/)
 -   [Docker-Compose](docker-compose.yml)
 -   [ksh](https://k6.io/docs/)
 
 # 
 
-## Estrutura do projeto
+## Estrutura do Projeto
 
 ```
 currency-challenge-bravo-api
