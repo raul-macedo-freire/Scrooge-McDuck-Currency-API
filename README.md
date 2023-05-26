@@ -50,7 +50,7 @@ Let's say McDuck's dollar conversion rate is 2 (which is not possible since he i
 
 
 ## 💉**Dependency Injection**
-In order to use dependency injection concepts and tools, this API uses python [Injector](https://injector.readthedocs.io/en/latest/). I had to come around with some logics to make it work fine wich performed, ~~IMHO~~~, just fine and looks pretty well.  
+In order to use dependency injection concepts and tools, this API uses python [Injector](https://injector.readthedocs.io/en/latest/). I had to come around with some logics to make it work fine wich performed, ~~IMHO~~, just fine and looks pretty well.  
 
 ## ⌚**Scheduler**
 
